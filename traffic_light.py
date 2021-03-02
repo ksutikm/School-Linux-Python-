@@ -9,4 +9,4 @@ def traffic_light():
     elif str == data[3]:
         print('Иди!')
 
-traffic_light();
+traffic_light()
