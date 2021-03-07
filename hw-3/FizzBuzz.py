@@ -23,6 +23,9 @@ def way_3():
         else: n=''
         print(n+f+b)
 
-# way_1()
-# way_2()
+print("Решение 1:")
+way_1()
+print("Решение 2:")
+way_2()
+print("Решение 3:")
 way_3()
