@@ -21,7 +21,7 @@ def menu():
             if not str in data:
                 print("\nВведены некоректные данные!!!\nНужно написать: 1, 2, 3 или 4!!!")
             elif str == '1':
-                num = int(input("\nВведите целое положительное число: "))
+                num = int(input("\nВведите целое положительное число: ").strip())
                 if num < 0:
                     print("\nВведено отрицательное число!!!")
                     continue
@@ -30,8 +30,8 @@ def menu():
                     continue
                 print(is_prime(num))
             elif str == '2' or str == '3':
-                a = int(input("Введите целое число a = "))
-                b = int(input("Введите целое число b = "))
+                a = int(input("Введите целое число a = ").strip())
+                b = int(input("Введите целое число b = ").strip())
                 if str == '2':
                     print(f"\nНаибольший общий делитель: {gcd(a, b)}")
                 else:
