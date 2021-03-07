@@ -20,7 +20,13 @@ try:
     else:
         res = foo(a, b)
         print(f"\nЧастота использования цифр в диапазоне от {a} до {b}:")
+        d = {}
         for i in range(10):
-            print(f"Цифра {i}: {res.count(str(i))}")
+            d[str(i)] = 0
+        for i in res:
+            if i != '-':
+                d[i] += 1
+        for key in d:
+            print(f"Цифра {key}: {d[key]}")
 except ValueError:
     print("\nВведена строка или не целое число!\n")
