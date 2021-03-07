@@ -25,10 +25,10 @@ if data.isdigit():
     print("Строка должна состоять из символов, а не из цифр")
 else:
     d = {}
-    for c in data:
-        if c in d.keys():
-            d[c] += 1
+    for s in data:
+        if s in d.keys():
+            d[s] += 1
         else:
-            d[c] = 1
+            d[s] = 1
     for key, value in sorted(d.items(), key=lambda x: x[0]):
         print("{} = {}".format(key if key != '\n' else '\\n', value))
