@@ -1,10 +1,27 @@
-"""
-Пользователь вводит строку, в коносль выводится
-частота использования символов в тексте.
-"""
+def main():
+    """
+    Пользователь вводит строку, в коносль выводится
+    частота использования символов в тексте.
+    """
+    data = get_data()
+    if data.isdigit():
+        print("Строка должна состоять из символов, а не из цифр")
+    else:
+        d = {}
+        for s in data:
+            if s in d.keys():
+                d[s] += 1
+            else:
+                d[s] = 1
+        for key, value in sorted(d.items(), key=lambda x: x[0]):
+            print("{} = {}".format(key if key != '\n' else '\\n', value))
 
-data = input("Введите строку: ")
-# data = """Shakespeare "Romeo and Juliet" (PROLOGUE)
+def get_data():
+    data = input("Введите строку: ")
+
+    if not data:
+        data = """
+Shakespeare "Romeo and Juliet" (PROLOGUE)
 
 # Two households, both alike in dignity,
 # In fair Verona, where we lay our scene,
@@ -21,14 +38,7 @@ data = input("Введите строку: ")
 # The which if you with patient ears attend,
 # What here shall miss, our toil shall strive to mend."""
 
-if data.isdigit():
-    print("Строка должна состоять из символов, а не из цифр")
-else:
-    d = {}
-    for s in data:
-        if s in d.keys():
-            d[s] += 1
-        else:
-            d[s] = 1
-    for key, value in sorted(d.items(), key=lambda x: x[0]):
-        print("{} = {}".format(key if key != '\n' else '\\n', value))
+    return data
+
+if __name__ == '__main__':
+    main()

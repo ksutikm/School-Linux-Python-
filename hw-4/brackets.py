@@ -15,5 +15,9 @@ def check_braclets(s):
     else:
         return'Неправильное количество скобок!'
 
-s = input('Введите строку: ')
-print(check_braclets(s))
+def main():
+    s = input('Введите строку: ')
+    print(check_braclets(s))
+
+if __name__ == '__main__':
+    main()

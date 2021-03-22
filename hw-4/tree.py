@@ -75,7 +75,7 @@ def postorder(tree):
             stack.append(current.left)
         if current.right:
             stack.append(current.right)
-    
+
     while out:
         print(out.pop())
 
@@ -90,14 +90,18 @@ def levelorder(tree):
         if tree.right:
             queue.append(tree.right)
 
-print('\nПрямой обход:')
-preorder(tree)
+def main():
+    print('\nПрямой обход:')
+    preorder(tree)
 
-print('\nЦентрированный обход:')
-inorder(tree)
+    print('\nЦентрированный обход:')
+    inorder(tree)
 
-print('\nОбратный обход:')
-postorder(tree)
+    print('\nОбратный обход:')
+    postorder(tree)
 
-print('\nПоиск в ширину:')
-levelorder(tree)
+    print('\nПоиск в ширину:')
+    levelorder(tree)
+
+if __name__ == '__main__':
+    main()

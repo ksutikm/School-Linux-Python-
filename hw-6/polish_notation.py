@@ -1,4 +1,12 @@
 def calc():
+    """
+    Калькулятор для расчета базовых операций:
+        "+" - сложение
+        '-' - вычитание
+        '*' - умножение
+        '/' - деление
+        '**' - возведение в степень
+    """
     with open('./example.txt') as f:
         example = f.read()
     if example:
@@ -12,6 +20,7 @@ def calc():
         print('Введен не пример, попробйте ещё раз!')
 
 def check_brackets(s):
+    """ Проверка скобок """
     stack = []
     for c in s:
         if c == '(':
@@ -25,6 +34,10 @@ def check_brackets(s):
     return False
 
 def infix_to_postfix(stack):
+    """
+    Переход от инфиксной записи в постфиксную
+    (От прямой польской записи в обратную)
+    """
     prioritet = {'(': 1, '+': 2, '-': 2, '*': 3, '/': 3}
     postfix, op_stack = [], []
     for elem in stack:
@@ -46,6 +59,7 @@ def infix_to_postfix(stack):
     return postfix
 
 def calc_posfix(stack):
+    """ Вычисление постфиксной записи """
     digits_stack = []
     operators = {
         '+': lambda a, b: a + b,
@@ -63,6 +77,7 @@ def calc_posfix(stack):
     return digits_stack.pop()
 
 def check_digit(n):
+    """ Проверка объекта на число """
     if n.isdigit():
         return True
     elif n[0] == '-' and n[1:].isdigit():

@@ -1,6 +1,14 @@
 from math import inf
 
 def calculator():
+    """
+    Калькулятор для расчета базовых операций:
+        "+" - сложение
+        '-' - вычитание
+        '*' - умножение
+        '/' - деление
+        '**' - возведение в степень
+    """
     print('''
     Калькулятор для расчета базовых операций:
     "+" - сложение
@@ -50,6 +58,7 @@ def calculator():
 
 
 def get_float(number):
+    """ Получение числа типа float """
     try:
         number = float(number)
     except Exception as ex:
@@ -58,6 +67,7 @@ def get_float(number):
     return number
 
 def get_operation(data):
+    """ Получение оператора для вычисления """
     operation = ['**', '+', '-', '*', '/']
     for op in operation:
         index = data.find(op)

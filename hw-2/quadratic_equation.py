@@ -1,6 +1,5 @@
-# Решение квадратного уравнения (комплексные числа учитываются)
-
 def quadratic_equation():
+    ''' Решение квадратного уравнения '''
     print('Введите коэффициенты квадратного уровнения a•x²+b•x+c=0')
     a = float(input('Введите значение a: '))
     b = float(input('Введите значение b: '))
@@ -16,5 +15,5 @@ def quadratic_equation():
         print('x₁ = {0:.2f}'.format(x1))
         print('x₂ = {0:.2f}'.format(x2))
 
-
-quadratic_equation()
+if __name__ == '__main__':
+    quadratic_equation()
