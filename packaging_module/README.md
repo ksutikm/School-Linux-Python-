@@ -1,0 +1,1 @@
+Initialization variable types of int and float.

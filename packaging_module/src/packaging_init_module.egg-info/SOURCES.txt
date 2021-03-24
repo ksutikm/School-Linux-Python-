@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/module_pkg/__init__.py
+src/module_pkg/init_module.py
+src/packaging_init_module.egg-info/PKG-INFO
+src/packaging_init_module.egg-info/SOURCES.txt
+src/packaging_init_module.egg-info/dependency_links.txt
+src/packaging_init_module.egg-info/top_level.txt
