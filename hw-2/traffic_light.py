@@ -13,5 +13,6 @@ def traffic_light():
     elif str == data[3] or str == data[4]:
         print('Иди!')
 
+
 if __name__ == '__main__':
     traffic_light()

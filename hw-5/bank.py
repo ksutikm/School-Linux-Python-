@@ -1,7 +1,9 @@
 from init_module import init_int, init_float
 
+
 class MyError(Exception):
     """ Описание своей ошибки """
+
     def __init__(self, text):
         self.txt = text
 
@@ -13,6 +15,7 @@ def check(a):
     else:
         return False
 
+
 def calc(money, percent, months):
     """ Вычисление итоговой суммы денежных средств в копилке """
     ans = 0
@@ -22,6 +25,7 @@ def calc(money, percent, months):
         print(f"Месяц {i}, сумма на депозите {ans:.2f}")
 
     print(f'\nИтоговая сумма средств в копилке: {ans:.2f}')
+
 
 def main():
     """
@@ -42,7 +46,8 @@ def main():
                 raise MyError('\nВведен неверный процент!\n')
             months = init_int('Введите срок накопления (количество месяцев): ')
             if months < 6 and months > 120:
-                raise MyError('Введено неверное количество месяцев! (Минимально - 6, максимально - 120)')
+                raise MyError(
+                    'Введено неверное количество месяцев! (Минимально - 6, максимально - 120)')
         except ValueError:
             print('\nВы ввели не число, попробуйте ещё раз!\n')
             continue

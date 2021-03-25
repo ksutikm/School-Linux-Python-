@@ -1,5 +1,6 @@
 from init_module import init_float
 
+
 def main():
     '''
     Решение квадратного уравнения
@@ -45,6 +46,7 @@ def main():
 
     except ValueError:
         print("Введена строка, а не число")
+
 
 if __name__ == '__main__':
     main()

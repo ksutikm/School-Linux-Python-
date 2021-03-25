@@ -6,5 +6,6 @@ def main():
             new_list.append(i)
     print(f'Список без повторяющихся элементов: {new_list}')
 
+
 if __name__ == '__main__':
     main()

@@ -10,16 +10,19 @@ def symbols_text(s):
     for key in sorted(dictionary):
         print(f'{key}: {dictionary[key]}')
 
+
 def words_text(text):
     '''
     Подсчета количества слов в тексте
     '''
-    text = text.replace('\n', ' ').replace(',', ' ').replace('.', ' ').replace('?', ' ').replace('!', ' ')
+    text = text.replace('\n', ' ').replace(',', ' ').replace(
+        '.', ' ').replace('?', ' ').replace('!', ' ')
     words = text.split(' ')
     for w in words:
         if w == '':
             words.remove(w)
     return len(words)
+
 
 def sentence_text(text):
     """
@@ -30,6 +33,7 @@ def sentence_text(text):
     exclamation_mark = text.count('!')
     question_mark = text.count('?')
     return dots + exclamation_mark + question_mark
+
 
 def get_data():
 
@@ -55,6 +59,7 @@ What here shall miss, our toil shall strive to mend."""
 
     return data
 
+
 def main():
     data = get_data()
     while True:
@@ -76,6 +81,7 @@ def main():
             print(f'Количество предложений в тексте: {sentence_text(data)}')
         else:
             break
+
 
 if __name__ == '__main__':
     main()

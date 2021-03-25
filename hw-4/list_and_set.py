@@ -9,5 +9,6 @@ def main():
     else:
         print('Множества этих списков не совпадают')
 
+
 if __name__ == '__main__':
     main()

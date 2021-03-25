@@ -15,5 +15,6 @@ def quadratic_equation():
         print('x₁ = {0:.2f}'.format(x1))
         print('x₂ = {0:.2f}'.format(x2))
 
+
 if __name__ == '__main__':
     quadratic_equation()

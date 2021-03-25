@@ -1,5 +1,6 @@
 from math import inf
 
+
 def calculator():
     """
     Калькулятор для расчета базовых операций:
@@ -27,10 +28,11 @@ def calculator():
             a = ans if ans else get_float(data[:index])
             b = get_float(data[index + len(operation):])
 
-            add = lambda a, b: a + b
-            difference = lambda a, b: a - b
-            multiply = lambda a, b: a * b
-            divide = lambda a, b: a / b if b else inf
+            def add(a, b): return a + b
+            def difference(a, b): return a - b
+            def multiply(a, b): return a * b
+            def divide(a, b): return a / b if b else inf
+
             def power(a, b):
                 try:
                     ans = a ** b
@@ -66,6 +68,7 @@ def get_float(number):
         return 0
     return number
 
+
 def get_operation(data):
     """ Получение оператора для вычисления """
     operation = ['**', '+', '-', '*', '/']
@@ -74,6 +77,7 @@ def get_operation(data):
         if index > -1:
             return op, index
     return False, False
+
 
 if __name__ == '__main__':
     calculator()

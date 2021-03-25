@@ -1,5 +1,6 @@
 from random import randint, choice
 
+
 def cipher(file='./text.txt'):
     """ XOR шифр """
     with open(file, 'rb') as f:
@@ -10,6 +11,7 @@ def cipher(file='./text.txt'):
 
     with open(file, 'wb') as f:
         f.write(ans)
+
 
 def generation_key(len_data):
     """ Генерация ключа """
@@ -22,6 +24,7 @@ def generation_key(len_data):
         print(f'Автоматически сгенерированный ключ:\n{key}')
     return bytearray(key, 'utf-8')
 
+
 def xor_cipher(data, key):
     """ Алгоритм шифрования """
     ans = bytearray()
@@ -32,8 +35,10 @@ def xor_cipher(data, key):
         ans.append(data[i] ^ key[i % len_key])
     return ans
 
+
 def main():
     cipher('./War and Peace.txt')
+
 
 if __name__ == "__main__":
     main()

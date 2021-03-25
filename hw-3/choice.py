@@ -1,6 +1,7 @@
 from math import sqrt
 from init_module import init_int
 
+
 def menu():
     """
     Пользователю дается выбор из 4 пунктов что он может сделать:
@@ -20,7 +21,8 @@ def menu():
 
         try:
             if not str in data:
-                print("\nВведены некоректные данные!!!\nНужно написать: 1, 2, 3 или 4!!!")
+                print(
+                    "\nВведены некоректные данные!!!\nНужно написать: 1, 2, 3 или 4!!!")
             elif str == '1':
                 num = init_int("\nВведите целое положительное число: ")
                 if num < 0:
@@ -42,6 +44,7 @@ def menu():
         except ValueError:
             print("\nВведено слово/строка или не целое число!!!")
 
+
 def is_prime(num):
     """
     Данная функция определяет является ли число простым или нет.
@@ -55,6 +58,7 @@ def is_prime(num):
         k += 1
     return f"\nЧисло {num} простое."
 
+
 def gcd(a, b):
     """
     Нахождение наибольшего общего делителя
@@ -65,6 +69,7 @@ def gcd(a, b):
         a, b = b, a % b
     return a
 
+
 def lcm(a, b):
     """
     Нахождение наименьшего общего кратного
@@ -73,6 +78,7 @@ def lcm(a, b):
         a, b = -a, -b
     ans = a * b // gcd(a, b)
     return ans
+
 
 if __name__ == '__main__':
     menu()

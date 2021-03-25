@@ -29,7 +29,6 @@ class Tree:
             self.right.print_tree()
 
 
-
 # tree = Tree(4, Tree(2, Tree(1), Tree(3)), Tree(6, Tree(5), Tree(7)))
 tree = Tree(4)
 tree.add(2)
@@ -39,6 +38,7 @@ tree.add(1)
 tree.add(5)
 tree.add(7)
 # tree.print_tree()
+
 
 def preorder(tree):
     if not tree:
@@ -53,6 +53,7 @@ def preorder(tree):
         if tree.left:
             stack.append(tree.left)
 
+
 def inorder(tree):
     stack = []
     while stack or tree:
@@ -63,6 +64,7 @@ def inorder(tree):
             tree = stack.pop()
             print(tree.value)
             tree = tree.right
+
 
 def postorder(tree):
     stack = []
@@ -79,6 +81,7 @@ def postorder(tree):
     while out:
         print(out.pop())
 
+
 def levelorder(tree):
     queue = []
     queue.append(tree)
@@ -89,6 +92,7 @@ def levelorder(tree):
             queue.append(tree.left)
         if tree.right:
             queue.append(tree.right)
+
 
 def main():
     print('\nПрямой обход:')
@@ -102,6 +106,7 @@ def main():
 
     print('\nПоиск в ширину:')
     levelorder(tree)
+
 
 if __name__ == '__main__':
     main()

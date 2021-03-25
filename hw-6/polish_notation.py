@@ -19,6 +19,7 @@ def calc():
     else:
         print('Введен не пример, попробйте ещё раз!')
 
+
 def check_brackets(s):
     """ Проверка скобок """
     stack = []
@@ -32,6 +33,7 @@ def check_brackets(s):
     if len(stack) == 0:
         return True
     return False
+
 
 def infix_to_postfix(stack):
     """
@@ -58,6 +60,7 @@ def infix_to_postfix(stack):
         postfix.append(op_stack.pop())
     return postfix
 
+
 def calc_posfix(stack):
     """ Вычисление постфиксной записи """
     digits_stack = []
@@ -76,6 +79,7 @@ def calc_posfix(stack):
             digits_stack.append(result)
     return digits_stack.pop()
 
+
 def check_digit(n):
     """ Проверка объекта на число """
     if n.isdigit():
@@ -83,6 +87,7 @@ def check_digit(n):
     elif n[0] == '-' and n[1:].isdigit():
         return True
     return False
+
 
 if __name__ == '__main__':
     calc()

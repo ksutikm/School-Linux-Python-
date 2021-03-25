@@ -1,10 +1,12 @@
 from init_module import init_int
 
+
 def foo(a, b):
     """
     Функция foo собирает все числа из заданного диапазона в одну строку.
     """
     return ''.join(str(x) for x in range(a, b + 1))
+
 
 def main():
     """ Частота использования цифр в диапозоне
@@ -30,6 +32,7 @@ def main():
                 print(f"Цифра {key}: {d[key]}")
     except ValueError:
         print("\nВведена строка или не целое число!\n")
+
 
 if __name__ == '__main__':
     main()

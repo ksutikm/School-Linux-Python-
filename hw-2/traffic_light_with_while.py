@@ -5,7 +5,8 @@ def traffic_light():
     '''
     data = ['красный', 'желтый', 'жёлтый', 'зеленый', 'зелёный', 'выход']
     while True:
-        str = input('Введите сигнал светофора (завершение скрипта - команда "выход"): ').lower().strip()
+        str = input(
+            'Введите сигнал светофора (завершение скрипта - команда "выход"): ').lower().strip()
         if str == data[5]:
             break
         elif not str in data:
@@ -16,6 +17,7 @@ def traffic_light():
             print('Подожди!')
         elif str == data[3] or str == data[4]:
             print('Иди!')
+
 
 if __name__ == '__main__':
     traffic_light()

@@ -1,10 +1,12 @@
 from itertools import cycle
 
+
 def cipher(data, key):
     """
     Алгоритм шифрования XOR
     """
     return ''.join(chr(ord(a) ^ ord(b)) for a, b in zip(data, cycle(key)))
+
 
 def main():
     """
@@ -33,6 +35,7 @@ def main():
                 print(f"\nЗасшифрованный текст:\n{text}")
             else:
                 print(f"\nРасшифрованный текст:\n{text}")
+
 
 if __name__ == '__main__':
     main()

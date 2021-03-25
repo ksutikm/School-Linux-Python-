@@ -1,6 +1,7 @@
 from random import randint
 from init_module import init_int
 
+
 def bubble_sort(a):
     """
     Сортировка методом пузырька
@@ -10,6 +11,7 @@ def bubble_sort(a):
         for j in range(n-i-1):
             if a[j] > a[j+1]:
                 a[j], a[j+1] = a[j+1], a[j]
+
 
 def main():
     try:
@@ -29,6 +31,7 @@ def main():
 
     except ValueError:
         print('Введено не число!')
+
 
 if __name__ == '__main__':
     main()

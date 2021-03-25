@@ -16,6 +16,7 @@ def main():
         for key, value in sorted(d.items(), key=lambda x: x[0]):
             print("{} = {}".format(key if key != '\n' else '\\n', value))
 
+
 def get_data():
     data = input("Введите строку: ")
 
@@ -39,6 +40,7 @@ Shakespeare "Romeo and Juliet" (PROLOGUE)
 # What here shall miss, our toil shall strive to mend."""
 
     return data
+
 
 if __name__ == '__main__':
     main()
